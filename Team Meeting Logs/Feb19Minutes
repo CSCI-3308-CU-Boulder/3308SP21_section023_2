@@ -1,0 +1,19 @@
+Create a README file with project name, architecture, description, and team members. 
+	Make sure to format it https://www.markdownguide.org/cheat-sheet/
+
+Make sure to list any dependencies for your project
+
+Do NOT commit any private infomration in the GitHub
+
+If using an architecture or service that requires a password, make sure to include a way to generate them
+
+Do not need to commit .exe files required to run our program, just list them
+
+For creating diagrams, there are two links under the Week 3 module in Canvas that provide tools to help make them look nice
+
+Keep the GitHub organized (keep milestone stuff in milestones, keep meeting stuff in meetings, etc)
+	Create new folders as needed for different topics
+
+Have one person commit the PDF to github and have another commit the README file to keep commit percentages equal
+
+Next step is to start coding the project!
