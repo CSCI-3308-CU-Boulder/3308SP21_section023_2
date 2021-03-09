@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="roomble.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="roomble.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img  class="logo_header" src="Roomblelogo.png"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center">
+          <h3> Add Photos</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm image-container">
+          <img id="photo1" class="image-data">
+          <form action="">
+            <input class="form-control-file" type="file" id="photoInput1" name="filename" onchange="readURL(this, 'photo1')">
+          </form>
+          One of three columns
+        </div>
+        <div class="col-sm image-container">
+          <img id="photo2" class="image-data">
+          <form action="">
+            <input class="form-control-file" type="file" id="photoInput2" name="filename" onchange="readURL(this, 'photo2')">
+          </form>
+          One of three columns
+        </div>
+        <div class="col-sm image-container">
+          <img id="photo3" class="image-data">
+          <form action="">
+            <input class="form-control-file" type="file" id="photoInput3" name="filename" onchange="readURL(this, 'photo3')">
+          </form>
+          One of three columns
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm image-container">
+          <img id="photo4" class="image-data">
+          <form action="">
+            <input class="form-control-file"  type="file" id="photoInput4" name="filename" onchange="readURL(this, 'photo4')">
+          </form>
+          One of three columns
+        </div>
+        <div class="col-sm image-container">
+          <img id="photo5" class="image-data">
+          <form action="">
+            <input class="form-control-file"  type="file" id="photoInput5" name="filename" onchange="readURL(this, 'photo5')">
+          </form>
+          One of three columns
+        </div>
+        <div class="col-sm image-container">
+          <img id="photo6" class="image-data">
+          <form action="">
+            <input class="form-control-file"  type="file" id="photoInput6" name="filename" onchange="readURL(this, 'photo6')">
+          </form>
+          One of three columns
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary btn-block">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
