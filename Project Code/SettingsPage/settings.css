@@ -38,6 +38,14 @@
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #4CAF50; /* Green background */
+  background: #4CAF50; /* blue background */
   cursor: pointer; /* Cursor on hover */
+}
+hr.hr1 {
+  border: 5px solid gray;
+  border-radius: 5px;
+}
+
+body {
+  background-color: lightblue;
 }

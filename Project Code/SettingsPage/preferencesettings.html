@@ -29,8 +29,10 @@
                 }
             </style>
             <ul class="navbar-nav">
-                <li class="navbar-brand ml-auto" href="homepage">
+                <li class="navbar-brand ml-auto">
+                  <a href= "../HomeScreen/homepage.html">
                     <img src="roomblelogo.png" alt="Roomble Logo" width = "50px" height="50px">
+                  </a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="profilesettings.html">Profile Settings</a>
@@ -53,7 +55,7 @@
             <div class="slidecontainer">
               <input type="range" min="100" max="5000" value="1500" class="slider"
                id="rent" step = "100" oninput="outputUpdate(value)">
-            <p>$<output for="rent" id="volume">1500</output> </p>
+            <p>$<output for="rent" id="rentOutput">1500</output> </p>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label" for="location">Location</label>
@@ -75,8 +77,8 @@
         <h6>Target Age Range</h6>
         <div class="slidecontainer">
           <input type="range" min="18" max="80" value="21" class="slider"
-           id="age" step = "1" oninput="outputUpdate(value)">
-        <p><output for="age" id="volume">21</output> years</p>
+           id="age" step = "1" oninput="outputUpdate2(value)">
+        <p><output for="age" id="ageOutput">21</output> years</p>
     </div>
 
     </body>

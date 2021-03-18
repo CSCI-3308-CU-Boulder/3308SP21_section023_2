@@ -20,6 +20,10 @@ slider.oninput = function() {
 }
 
 
-function outputUpdate(vol){
-  document.querySelector('#volume').value = vol;
+function outputUpdate(rent){
+  document.querySelector('#rentOutput').value = rent;
+}
+
+function outputUpdate2(age){
+  document.querySelector('#ageOutput').value = age;
 }
