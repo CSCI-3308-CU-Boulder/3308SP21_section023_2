@@ -1,0 +1,50 @@
+// Creating tables
+Table users {
+  UserID int [pk, increment] // auto-increment
+  fullName varchar
+  UserName varchar
+  password varchar
+  birthDate BirthDate
+  gender varchar
+  bio longtext
+  location varchar
+  seeking varchar
+  minAge int
+  maxAge int
+  rent int
+
+}
+
+Table photos {
+  photoID int [pk, increment]
+  userID int
+  link text
+ }
+
+Table users_message {
+  UserID int [ref: > users.UserID]
+  messageID int [ref: > message.messageID]
+}
+
+Table message {
+  messageID int [pk , increment]
+  from int
+  to int
+  sendtime datetime
+  actualMessage text
+  matchID int [ref: < match.matchID]
+}
+
+Table match {
+  matchID int [pk, increment]
+  first_user_Id int [ref: > users.UserID]
+  second_user_Id int [ref: > users.UserID]
+
+}
+
+// Creating references
+// You can also define relaionship separately
+// > many-to-one; < one-to-many; - one-to-one
+Ref: users.UserID < photos.photoID
+Ref: users.UserID > message.messageID
+Ref: match.matchID < message.messageID
