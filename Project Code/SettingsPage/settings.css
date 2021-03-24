@@ -47,5 +47,15 @@ hr.hr1 {
 }
 
 body {
-  background-color: lightblue;
+  background-color: #00bfff; /* For browsers that do not support gradients */
+  background-image: linear-gradient(90deg, #00bfff, darkblue);
+}
+/*
+body {
+  background-color: #00bfff !important;
+}*/
+
+
+.w3-card-4{
+  background-color: #ffffff;
 }
