@@ -42,13 +42,13 @@
   cursor: pointer; /* Cursor on hover */
 }
 hr.hr1 {
-  border: 5px solid gray;
+  border: 4px solid #343a40;
   border-radius: 5px;
 }
 
 body {
   background-color: #00bfff; /* For browsers that do not support gradients */
-  background-image: linear-gradient(90deg, #00bfff, darkblue);
+  background-image: linear-gradient(lightblue, #00bfff);
 }
 /*
 body {
@@ -58,4 +58,9 @@ body {
 
 .w3-card-4{
   background-color: #ffffff;
+}
+
+.container {
+  padding-top: 50px;
+  padding-bottom: 140px;
 }
