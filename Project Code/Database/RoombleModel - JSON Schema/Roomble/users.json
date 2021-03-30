@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "users",
+    "properties": {
+        "UserID": {
+            "type": "string"
+        },
+        "UserName": {
+            "type": "string"
+        },
+        "fullName": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string"
+        },
+        "birthDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "gender": {
+            "type": "string"
+        },
+        "bio": {
+            "type": "string"
+        },
+        "preferences": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "string"
+                },
+                "seeking": {
+                    "type": "string"
+                },
+                "minAge": {
+                    "type": "number"
+                },
+                "maxAge": {
+                    "type": "number"
+                },
+                "rent": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "UserID",
+        "UserName",
+        "fullName",
+        "password"
+    ]
+}

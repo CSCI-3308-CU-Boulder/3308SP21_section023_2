@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "match",
+    "properties": {
+        "matchID": {
+            "type": "number"
+        },
+        "userID1": {
+            "type": "string"
+        },
+        "userID2": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "matchID",
+        "userID1",
+        "userID2"
+    ]
+}

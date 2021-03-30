@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "users_message",
+    "properties": {
+        "UserID": {
+            "type": "string"
+        },
+        "messageID": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "UserID",
+        "messageID"
+    ]
+}

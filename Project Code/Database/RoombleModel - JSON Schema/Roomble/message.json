@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "message",
+    "properties": {
+        "messageID": {
+            "type": "number"
+        },
+        "from": {
+            "type": "string"
+        },
+        "to": {
+            "type": "string"
+        },
+        "sendtime": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "text": {
+            "type": "string"
+        },
+        "matchID": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "messageID",
+        "from",
+        "to",
+        "text"
+    ]
+}
