@@ -57,9 +57,62 @@ function emailLogin() {
             .catch(console.log)
 }
 
+function createCard(itemID, itemName, itemImg, itemDescrip, itemQuantity, itemTags)
+{
+  // Get all the info submitted by the modal form and create a card with all those attributes
+  var container = document.getElementById('item_card_holder');
+  var newCard = document.createElement('div');
+  newCard.classList = 'card';
+  var item_id = itemID;
+  var card_id = item_id;
+  var item_name = itemName;
+  var item_img = itemImg;
+  var description = itemDescrip;
+  var item_tags = itemTags; // Items can have many tags or none -- have to add them!
+  var tag_content = ``;
+  if(item_tags.length != 0)
+  {
+    tag_content += `
+    <br><br>`;
+    for(var i = 0; i < item_tags.length; i++)
+    {
+      tag_content += `
+      <span class="label ${item_tags[i]}">${item_tags[i]}</span>`;
+    }
+  }
+
+function onLoad(items) {
+  // TODO: Need to check for the user!
+  // console.log(items);
+
+  var item_keys = Object.keys(items);
+
+  for (i = 0; i < item_keys.length; i++) {
+    var itemID = item_keys[i];
+    var itemEmail = items[itemID]['email'];
+    if(itemEmail == isNotEmail)
+    {
+      var itemName = items[itemID]['name'];
+      var itemImg = items[itemID]['image'];
+      var itemDescrip;
+      if (items[itemID]['description'].length > 20){
+        itemDescrip = items[itemID]['description'].substring(0, 30);
+      }
+      else {
+        itemDescrip = items[itemID]['description'];
+      }
+      var itemQuantity = items[itemID]['quantity'];
+      var itemTags = items[itemID]['tags'];
+      createCard(itemID, itemName, itemImg, itemDescrip, itemQuantity, itemTags);
+    }
+  }
+}
+
+
+
 //BARTERHUB CODE USE FOR REFERENCES
 
-
+/*
 // FIREBASE CONFIG
 var firebaseConfig = {
   apiKey: "",
@@ -255,3 +308,4 @@ function onLoad(items) {
 }
 
 getRealTimeUpdates(onLoad);
+*/
