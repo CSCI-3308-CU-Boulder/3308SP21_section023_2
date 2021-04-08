@@ -18,7 +18,7 @@
 
 // Initialize Firebase
 var app = firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+//firebase.analytics();
 var db = app.database(); //access firebase
 
 function readURL(input, target)
