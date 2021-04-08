@@ -11,5 +11,7 @@
    measurementId: "G-X8DB013271"
   };
   // Initialize Firebase
+  /*
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+*/

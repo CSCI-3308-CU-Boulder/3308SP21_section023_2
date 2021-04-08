@@ -1,5 +1,6 @@
-var firebaseConfig {
-  apiKey: "AIzaSyAntjt2kCb6-HpIcfmswpu7lNly-6vaItA",
+
+var firebaseConfig = {
+ apiKey: "AIzaSyAntjt2kCb6-HpIcfmswpu7lNly-6vaItA",
  authDomain: "roomble-73694.firebaseapp.com",
  databaseURL: "https://roomble-73694-default-rtdb.firebaseio.com",
  projectId: "roomble-73694",
@@ -9,9 +10,9 @@ var firebaseConfig {
  measurementId: "G-X8DB013271"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+var app = firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-var firebase = firebase.database(); //access firebase
+var db = app.database(); //access firebase
 
 function readURL(input, target)
 {
@@ -58,22 +59,105 @@ function emailLogin() {
             .catch(console.log)
 }
 
-// Stores all the user's new item in the database
-function addItemToDatabase()
+  //function that adds data from photospage.html to database
+function addPhotoToDatabase()
 {
+  var user = firebase.auth().currentUser;
+
   // Get all the data from the form
-  var form = document.getElementById("add_item_form")
-  var itemName = form.item_name.value;
+  var form = document.getElementById("photo_form");
   var url = form.item_url.value;
-  var descrip = form.inputted_description.value;
-  var quan = form.item_quantity.value;
-  console.log(form.foodBox.checked);
-  if(itemName == "" || url == "" || descrip == "" || quan == "")
+
+
+  if(url == " ")
   {
     alert("Error: provide a value for each field");
     return;
   }
-  
+
+/*
+  // Add a new document in collection "inventory"
+firestore.collection("inventory").doc('card_' + id.toString()).set({
+    date_posted: firebase.firestore.Timestamp.now(),
+    description: descrip,
+    image: url,
+    name: itemName,
+    quantity: quan,
+    sold: false,
+    email: isNotEmail,
+    tags: item_tags
+})*/
+
+firebase.database().ref('users/' + user).set({
+  link: url
+  });
+
+
+.then(function() {
+    console.log("Document successfully written!");
+    successfulAdd(true);
+})
+.catch(function(error) {
+    console.error("Error writing document: ", error);
+});
+
+// Create the corresponding card
+createCard('card_' + id, itemName, url, descrip, quan, tags);
+}
+
+}
+
+  //function that adds data from homepage.html to database
+  function addMatchToDatabase()
+  {
+    // Get all the data from the form
+    var form = document.getElementById("add_item_form")
+    var itemName = form.item_name.value;
+    var url = form.item_url.value;
+    var descrip = form.inputted_description.value;
+    var quan = form.item_quantity.value;
+    console.log(form.foodBox.checked);
+    if(itemName == "" || url == "" || descrip == "" || quan == "")
+    {
+      alert("Error: provide a value for each field");
+      return;
+    }
+  }
+
+  //function that adds data from preferencesettings.html to database
+  function addPreferencesToDatabase()
+  {
+    // Get all the data from the form
+    var form = document.getElementById("add_item_form")
+    var itemName = form.item_name.value;
+    var url = form.item_url.value;
+    var descrip = form.inputted_description.value;
+    var quan = form.item_quantity.value;
+    console.log(form.foodBox.checked);
+    if(itemName == "" || url == "" || descrip == "" || quan == "")
+    {
+      alert("Error: provide a value for each field");
+      return;
+    }
+  }
+
+  //function that adds data from profilesettings.html to database
+  function addProfileToDatabase()
+  {
+    // Get all the data from the form
+    var form = document.getElementById("add_item_form")
+    var itemName = form.item_name.value;
+    var url = form.item_url.value;
+    var descrip = form.inputted_description.value;
+    var quan = form.item_quantity.value;
+    console.log(form.foodBox.checked);
+    if(itemName == "" || url == "" || descrip == "" || quan == "")
+    {
+      alert("Error: provide a value for each field");
+      return;
+    }
+  }
+
 //function to display profile on home page, called in onLoad
 function createCard(itemID, itemName, itemImg, itemDescrip, itemQuantity, itemTags)
 {
@@ -98,13 +182,14 @@ function createCard(itemID, itemName, itemImg, itemDescrip, itemQuantity, itemTa
       <span class="label ${item_tags[i]}">${item_tags[i]}</span>`;
     }
   }
+}
 
 //calls createCard and its passed the users array and takes data from each user to display in createCard
 function onLoad(users) {
   // TODO: Need to check for the user!
   // console.log(users);
 
-  var user_keys = Object.keys();
+  var user_keys = firebase.auth().users;
 
   for (i = 0; i < user_keys.length; i++) {
     var userID = user_keys[i];
@@ -126,6 +211,7 @@ function onLoad(users) {
     }
   }
 }
+
 
 
 
