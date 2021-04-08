@@ -1,0 +1,286 @@
+{
+    "modelName": "New model",
+    "collections": [
+        {
+            "collectionName": "UserArray",
+            "type": "object",
+            "properties": [
+                {
+                    "primaryKey": true,
+                    "properties": [
+                        {
+                            "primaryKey": true,
+                            "type": "string",
+                            "name": "userID",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "b9db6b70-971e-11eb-8548-39f93b6d9a3f",
+                            "required": true,
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "userName",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "d7ac2bd0-971e-11eb-8548-39f93b6d9a3f",
+                            "required": true,
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "fullName",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "e5240c10-971e-11eb-8548-39f93b6d9a3f",
+                            "required": true
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "password",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "f89353f0-971e-11eb-8548-39f93b6d9a3f",
+                            "required": true
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "birthDate",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "13ac4750-971f-11eb-8548-39f93b6d9a3f",
+                            "format": "date",
+                            "required": true,
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "email",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "51394460-971f-11eb-8548-39f93b6d9a3f",
+                            "format": "email"
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "gender",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "1fd7aa60-971f-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "bio",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "5db75b50-971f-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "location",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "d9ddbc60-971f-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "type": "string",
+                            "name": "seeking",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "e5363f10-971f-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "exclusiveMinimum": false,
+                            "exclusiveMaximum": false,
+                            "primaryKey": false,
+                            "childType": "number",
+                            "type": "numeric",
+                            "name": "minAge",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "fb97ebf0-971f-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "exclusiveMinimum": false,
+                            "exclusiveMaximum": false,
+                            "primaryKey": false,
+                            "childType": "number",
+                            "type": "numeric",
+                            "name": "maxAge",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "02292290-9720-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "exclusiveMinimum": false,
+                            "exclusiveMaximum": false,
+                            "primaryKey": false,
+                            "childType": "number",
+                            "type": "numeric",
+                            "name": "rent",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "0a1f8e80-9720-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "properties": [],
+                            "additionalProperties": false,
+                            "childType": "object",
+                            "type": "document",
+                            "documentId": false,
+                            "containerLevelKey": false,
+                            "hasERDDivider": false,
+                            "name": "photosArray",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "1d03d470-9720-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "properties": [],
+                            "additionalProperties": false,
+                            "childType": "object",
+                            "type": "document",
+                            "documentId": false,
+                            "containerLevelKey": false,
+                            "hasERDDivider": false,
+                            "name": "matchArray",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "42ec1d50-9720-11eb-8548-39f93b6d9a3f",
+                            "error": {}
+                        },
+                        {
+                            "primaryKey": false,
+                            "properties": [],
+                            "additionalProperties": false,
+                            "childType": "object",
+                            "type": "document",
+                            "documentId": false,
+                            "containerLevelKey": false,
+                            "hasERDDivider": false,
+                            "name": "messageArray",
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "GUID": "60820770-97f8-11eb-bd2b-8f11412667f6",
+                            "error": {}
+                        }
+                    ],
+                    "additionalProperties": false,
+                    "childType": "object",
+                    "type": "document",
+                    "documentId": true,
+                    "containerLevelKey": true,
+                    "hasERDDivider": true,
+                    "name": "UserObject",
+                    "isActivated": true,
+                    "GUID": "b5816020-971e-11eb-8548-39f93b6d9a3f",
+                    "sampleName": "",
+                    "isPatternField": true,
+                    "required": true,
+                    "error": {},
+                    "hackoladeMeta": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "b5813910-971e-11eb-8548-39f93b6d9a3f"
+            },
+            "isActivated": true,
+            "collectionUsers": [],
+            "GUID": "b57f6450-971e-11eb-8548-39f93b6d9a3f",
+            "bucketId": "b4b70b40-971e-11eb-8548-39f93b6d9a3f"
+        }
+    ],
+    "buckets": [
+        {
+            "name": "New database",
+            "type": "bucket",
+            "collectionIds": [
+                "b57f6450-971e-11eb-8548-39f93b6d9a3f"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "indexes": [],
+            "GUID": "b4b70b40-971e-11eb-8548-39f93b6d9a3f",
+            "documentIdName": "^[a-zA-Z0-9_.-]*$",
+            "documentIdType": "object"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "b4b70b40-971e-11eb-8548-39f93b6d9a3f": "New database",
+        "b57f6450-971e-11eb-8548-39f93b6d9a3f": "UserArray",
+        "b5816020-971e-11eb-8548-39f93b6d9a3f": "UserObject",
+        "d7ac2bd0-971e-11eb-8548-39f93b6d9a3f": "userName",
+        "e5240c10-971e-11eb-8548-39f93b6d9a3f": "fullName",
+        "b9db6b70-971e-11eb-8548-39f93b6d9a3f": "userID",
+        "f89353f0-971e-11eb-8548-39f93b6d9a3f": "password",
+        "1fd7aa60-971f-11eb-8548-39f93b6d9a3f": "gender",
+        "51394460-971f-11eb-8548-39f93b6d9a3f": "email",
+        "13ac4750-971f-11eb-8548-39f93b6d9a3f": "birthDate",
+        "5db75b50-971f-11eb-8548-39f93b6d9a3f": "bio",
+        "d9ddbc60-971f-11eb-8548-39f93b6d9a3f": "location",
+        "e5363f10-971f-11eb-8548-39f93b6d9a3f": "seeking",
+        "fb97ebf0-971f-11eb-8548-39f93b6d9a3f": "minAge",
+        "02292290-9720-11eb-8548-39f93b6d9a3f": "maxAge",
+        "0a1f8e80-9720-11eb-8548-39f93b6d9a3f": "rent",
+        "1d03d470-9720-11eb-8548-39f93b6d9a3f": "photosArray",
+        "42ec1d50-9720-11eb-8548-39f93b6d9a3f": "matchArray",
+        "60820770-97f8-11eb-bd2b-8f11412667f6": "messageArray"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "a0426151-971e-11eb-8548-39f93b6d9a3f"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "a0426152-971e-11eb-8548-39f93b6d9a3f"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVendor": "Realtime Firebase",
+    "appTarget": "FIREBASE",
+    "creationTS": "2021-04-06T21:25:35.845Z",
+    "GUID": "a0426150-971e-11eb-8548-39f93b6d9a3f",
+    "isLineageEnabled": false,
+    "lastModifTS": "2021-04-07T23:24:51.273Z",
+    "persistenceSchemaVersion": "4",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginName": "Firebase",
+        "pluginVersion": "0.1.4",
+        "pluginEngineVersion": "1.0.0"
+    }
+    
+}

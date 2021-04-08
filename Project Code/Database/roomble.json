@@ -1,0 +1,38 @@
+{
+    "metadata": {
+        "databaseVersion": 0.3,
+        "databaseVendor": "Realtime Firebase",
+        "applicationName": "Roomble",
+        "applicationVersion": 1.0
+    },
+    "users": [
+        {
+            "userID": "0",
+            "userName": "tempUser",
+            "fullName": "tempUser",
+            "password": "12345",
+            "birthDate": "2000-01-01",
+            "email": "roomble@roomble.com",
+            "gender": "none",
+            "bio": "hello world",
+            "location": "Boulder",
+            "seeking": "Gender",
+            "minAge": 18,
+            "maxAge": 99,
+            "rent": 500,
+            "photos": [
+                {"photoID": 0, "link": "link1"},
+                {"photoID": 1, "link": "link2"},
+                {"photoID": 2, "link": "link3"}
+            ],
+            "matches": [
+                {"matchID": 0, "matchUser": "userID1"},
+                {"matchID": 1, "matchUser": "userID2"},
+                {"matchID": 2, "matchUser": "userID3"}
+            ],
+            "messages": [
+                {"messageID": 0, "to": "userID", "from": "userID", "matchID": 0, "text": "hello world"}
+            ]
+        }
+    ]
+}
