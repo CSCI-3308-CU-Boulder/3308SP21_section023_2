@@ -11,6 +11,7 @@ var firebaseConfig {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+var firebase = firebase.database(); //access firebase
 
 function readURL(input, target)
 {
@@ -57,6 +58,23 @@ function emailLogin() {
             .catch(console.log)
 }
 
+// Stores all the user's new item in the database
+function addItemToDatabase()
+{
+  // Get all the data from the form
+  var form = document.getElementById("add_item_form")
+  var itemName = form.item_name.value;
+  var url = form.item_url.value;
+  var descrip = form.inputted_description.value;
+  var quan = form.item_quantity.value;
+  console.log(form.foodBox.checked);
+  if(itemName == "" || url == "" || descrip == "" || quan == "")
+  {
+    alert("Error: provide a value for each field");
+    return;
+  }
+  
+//function to display profile on home page, called in onLoad
 function createCard(itemID, itemName, itemImg, itemDescrip, itemQuantity, itemTags)
 {
   // Get all the info submitted by the modal form and create a card with all those attributes
@@ -81,16 +99,17 @@ function createCard(itemID, itemName, itemImg, itemDescrip, itemQuantity, itemTa
     }
   }
 
-function onLoad(items) {
+//calls createCard and its passed the users array and takes data from each user to display in createCard
+function onLoad(users) {
   // TODO: Need to check for the user!
-  // console.log(items);
+  // console.log(users);
 
-  var item_keys = Object.keys(items);
+  var user_keys = Object.keys();
 
-  for (i = 0; i < item_keys.length; i++) {
-    var itemID = item_keys[i];
-    var itemEmail = items[itemID]['email'];
-    if(itemEmail == isNotEmail)
+  for (i = 0; i < user_keys.length; i++) {
+    var userID = user_keys[i];
+    var userEmail = users[userID]['email'];
+    if(userEmail == isNotEmail)
     {
       var itemName = items[itemID]['name'];
       var itemImg = items[itemID]['image'];
