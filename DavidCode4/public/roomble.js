@@ -15,7 +15,7 @@
   //firebase.analytics();
 
 // Initialize Firebase
-var app = firebase.initializeApp(firebaseConfig);
+var rtDatabase = firebase.initializeApp(firebaseConfig);
 //firebase.analytics();
 //var db = app.database(); //access firebase
 var db = firebase.database(); //MAY NEED TO ADD AGAIN LATER
@@ -68,8 +68,11 @@ function emailLogin() {
   //THIS IS THE ONE THAT WORKS
 function addPhotoToDatabase()
 {
+  //Get user UID
   var user = firebase.auth().currentUser;
-
+  var userID = user.uid;
+  //Get user from the database
+  //var dbUser = firebase.database().ref('users').orderByChild('userID').equalTo(userID);
   // Get all the data from the form
   var form = document.getElementById("photo_form");
   var url = form.item_url.value;
@@ -81,7 +84,7 @@ function addPhotoToDatabase()
     return;
   }
 
-firebase.database().ref('users/' + user).set({
+firebase.database().ref('users').orderByChild('userID').equalTo(userID).ref('photos').push({
   link: url
   });
   //displayPhoto()
@@ -103,14 +106,16 @@ function addProfileToDatabase()
     alert("Error: provide a value for each field");
     return;
   }
-
-firebase.database().ref('users/' + user).set({
+//var usersRef = firebase.database().ref.child('users');
+firebase.database().ref.child('users').usersRef.push(
+{
   fullName: fullName,
   birthDate: birthDate,
   gender: gender,
   bio: bio
   });
 }
+
 //NOT SURE IF THIS ONE WORKS
 // function displayPhoto(id, url)
 // {
