@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <link href="roomble.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="roomble.js"></script>
+
+    <script defer src="/__/firebase/8.3.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.0/firebase-database.js"></script>
+  <!--  <script defer src="/__/firebase/8.3.0/firebase-firestore.js"></script> -->
+    <script defer src="/__/firebase/8.3.0/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.3.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.3.0/firebase-storage.js"></script>
+    <!--<script defer src="/__/firebase/8.3.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.3.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.3.0/firebase-performance.js"></script> -->
+
+<style>
+    .logo_header {
+      width: 80%;
+      max-width: 200px;
+    }
+
+    .image-container {
+      min-width: 200px;
+      min-height: 200px;
+      margin: 1rem;
+      padding: 1rem;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+    }
+</style>
+
+  <link href="../settingsPage/settings.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card text-center">
+      <div class="card-header">
+
+      <div class="row">
+        <div class="col text-center">
+          <h1>Login</h1>
+
+      <div class="row">
+        <div class="col">
+           <!--<button class="btn btn-primary btn-block">Submit</button>   This is the orginal code-->
+           <button onclick="emailLogin()">
+                Submit/login
+              </button>
+        </div>
+      </div>
+    </div>
+  <script defer src="../firebaseConfig.js"></script>
+  </body>
+</html>
