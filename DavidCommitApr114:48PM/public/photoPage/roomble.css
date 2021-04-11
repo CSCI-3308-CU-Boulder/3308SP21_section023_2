@@ -1,0 +1,20 @@
+.logo_header {
+  width: 80%;
+  max-width: 200px;
+}
+
+.image-container {
+  min-width: 200px;
+  min-height: 200px;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+.image-data{
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  border-radius: 10%;
+}
