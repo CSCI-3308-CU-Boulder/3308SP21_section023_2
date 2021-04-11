@@ -13,14 +13,14 @@
     measurementId: "G-X8DB013271"
   };
   // Initialize Firebase
-//  firebase.initializeApp(firebaseConfig);
+  //firebase.initializeApp(firebaseConfig);
   //firebase.analytics();
 
 // Initialize Firebase
 var app = firebase.initializeApp(firebaseConfig);
 //firebase.analytics();
-var db = app.database(); //access firebase
-
+//var db = app.database(); //access firebase
+var db = firebase.database();
 function readURL(input, target)
 {
     document.getElementById(target).style.display = "block";
@@ -82,24 +82,37 @@ function addPhotoToDatabase()
     return;
   }
 
-/*
-  // Add a new document in collection "inventory"
-firestore.collection("inventory").doc('card_' + id.toString()).set({
-    date_posted: firebase.firestore.Timestamp.now(),
-    description: descrip,
-    image: url,
-    name: itemName,
-    quantity: quan,
-    sold: false,
-    email: isNotEmail,
-    tags: item_tags
-})*/
-
 firebase.database().ref('users/' + user).set({
   link: url
   });
 }
 
+/*function addProfileToDatabase()
+{
+  var user = firebase.auth().currentUser;
+
+  // Get all the data from the form
+  var form = document.getElementById("");
+  var url = form.item_url.value;
+
+  if(url == " ")
+  {
+    alert("Error: provide a value for each field");
+    return;
+  }
+
+firebase.database().ref('users/' + user).set({
+  fullName: fullName
+  birthDate: birthday
+  gender: gender
+  bio: bio
+  });
+}
+
+function displayPhotos()
+{
+
+}*/
 /*.then(function() {
     console.log("Document successfully written!");
     successfulAdd(true);
