@@ -70,7 +70,8 @@
   <link href="../settingsPage/settings.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body onload="javascript:emailLoginData()">
+
     <nav id="navbar" class="navbar navbar-expand-sm bg-dark">
         <style>
             .navbar-nav > .active > a {color: rgb(255, 255, 255);}
@@ -119,7 +120,7 @@
               </div>
           One of three columns
         </div>
-        <div class="col-sm image-container">
+         <div class="col-sm image-container">
           <img id="photo2" class="image-data">
           <form action="">
             <input class="form-control-file" type="file" id="photoInput2" name="filename" onchange="readURL(this, 'photo2')">
@@ -134,7 +135,7 @@
           One of three columns
         </div>
       </div>
-      <div class="row">
+       <div class="row">
         <div class="col-sm image-container">
           <img id="photo4" class="image-data">
           <form action="">
@@ -159,16 +160,17 @@
       </div>
       <div class="row">
         <div class="col">
-           <!--<button class="btn btn-primary btn-block">Submit</button>   This is the orginal code-->
-           <!--<button onclick="emailLogin()"> -->
+           <button class="btn btn-primary btn-block">Click to Display Photo</button>
+           <button onclick="displayPhoto">
            <button onclick = "addPhotoToDatabase()">
                 Submit/login
               </button>
         </div>
       </div>
     </div>
+  </div>
   </form>
-
+</div>
 
 
   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
