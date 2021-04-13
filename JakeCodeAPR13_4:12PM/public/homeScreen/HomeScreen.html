@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Roomble HomePage</title>
+	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href="../resources/css/my_style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="login.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="roomble.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="roomble.js"></script>
+
+  <script defer src="/__/firebase/8.3.0/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/8.3.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/8.3.0/firebase-database.js"></script>
+<!--  <script defer src="/__/firebase/8.3.0/firebase-firestore.js"></script> -->
+  <script defer src="/__/firebase/8.3.0/firebase-functions.js"></script>
+  <script defer src="/__/firebase/8.3.0/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/8.3.0/firebase-storage.js"></script>
+  </head>
+  <body>
+    <body style ="background-color:rgb(0, 191, 255)">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="HomeScreen.html">
+		<img class="w3-round" src="../resources/roomble_logo_text.png" alt="Roomble Logo" width="60" height="30">
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarText">
+	  </div>
+	</nav>
+	<div class="container">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-4">
+				<img class="rounded img-fluid" src="RoombleLogo.jpg" alt="Roomble">
+			</div>
+			<div class="col-8">
+				<div class="jumbotron">
+				  <h1 class="display-4">Welcome to Roomble!</h1>
+				  <p class="lead">Roomble makes the process of finding a roommate more and rewarding by connecting people
+            who may not have otherwise met in real life. We aim to connect people to develop
+            close friendships with each other.</p>
+          <br>
+          <button onclick="emailLogin()" class="btn btn-light">
+               Log In
+             </button>
+          <br>
+          <br>
+          <br>
+          <div class="text">
+        		<a href="#myModal" class="btn btn-info" data-toggle="modal" onclick="openModal()">Sign Up</a>
+        	</div>
+          <div id="myModal" class="modal fade">
+            <div class="modal-dialog modal-login">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div class="avatar">
+                    <img src="https://www.tutorialrepublic.com/examples/images/avatar.png" alt="Avatar">
+                  </div>
+                  <button onclick="emailLogin()" class="btn btn-light">
+                       Sign up
+                     </button>
+                </div>
+                </div>
+            </div>
+          </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script defer src="firebaseConfig.js"></script>
+  </body>
+  </html>

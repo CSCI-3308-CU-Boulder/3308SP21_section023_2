@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <link href="roomble.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      /*var firebaseConfig = {
+        apiKey: "AIzaSyAntjt2kCb6-HpIcfmswpu7lNly-6vaItA",
+        authDomain: "roomble-73694.firebaseapp.com",
+        databaseURL: "https://roomble-73694-default-rtdb.firebaseio.com",
+        projectId: "roomble-73694",
+        storageBucket: "roomble-73694.appspot.com",
+        messagingSenderId: "44177614441",
+        appId: "1:44177614441:web:e6c2b18f7ba4a6b9d624f8",
+        measurementId: "G-X8DB013271"
+      };*/
+      // Initialize Firebase
+    //  firebase.initializeApp(firebaseConfig);
+      //firebase.analytics();
+    </script>
+
+<!--
+    <script defer src="/__/firebase/8.3.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <!-- <script defer src="/__/firebase/8.3.0/firebase-auth.js"></script> -->
+    <!-- <script defer src="/__/firebase/8.3.0/firebase-database.js"></script> -->
+  <!--  <script defer src="/__/firebase/8.3.0/firebase-firestore.js"></script> -->
+    <!-- <script defer src="/__/firebase/8.3.0/firebase-functions.js"></script> -->
+    <!-- <script defer src="/__/firebase/8.3.0/firebase-messaging.js"></script> -->
+    <!-- <script defer src="/__/firebase/8.3.0/firebase-storage.js"></script> -->
+    <!--<script defer src="/__/firebase/8.3.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.3.0/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.3.0/firebase-performance.js"></script> -->
+
+<style>
+    .logo_header {
+      width: 80%;
+      max-width: 200px;
+    }
+
+    .image-container {
+      min-width: 200px;
+      min-height: 200px;
+      margin: 1rem;
+      padding: 1rem;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+    }
+</style>
+
+  <link href="../settingsPage/settings.css" rel="stylesheet">
+  </head>
+
+  <body onload="javascript:emailLoginData()">
+
+    <nav id="navbar" class="navbar navbar-expand-sm bg-dark">
+        <style>
+            .navbar-nav > .active > a {color: rgb(255, 255, 255);}
+        </style>
+        <style>
+            #block_container{
+                text-align:center;
+            }
+            #bloc1, #bloc2{
+                display:inline;
+            }
+        </style>
+        <ul class="navbar-nav">
+            <li class="navbar-brand ml-auto" >
+              <a href= "../homeScreen/homepage.html">
+                <img src="roomblelogo.png" alt="Roomble Logo" width = "50px" height="50px">
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../settingsPage/profilesettings.html">Profile</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../settingsPage/preferencesettings.html">Preferences</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../displayInfo/personInfo.html">My Info</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="photospage.html">Photos</a>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+       <form id="photo_form">
+      <div class="card text-center">
+      <div class="card-header">
+
+      <div class="row">
+        <div class="col text-center">
+          <h1>Photos</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm image-container">
+         <img id="photo1" class="image-data">
+         <form action="">
+           <input class="form-control-file" type="file" id="photoInput1" name="filename" onchange="readURL(this, 'photo1')">
+         </form>
+         One of three columns
+       </div>
+         <div class="col-sm image-container">
+          <img id="photo2" class="image-data">
+          <form action="">
+            <input class="form-control-file" type="file" id="photoInput2" name="filename" onchange="readURL(this, 'photo2')">
+          </form>
+          One of three columns
+        </div>
+        <div class="col-sm image-container">
+          <img id="photo3" class="image-data">
+          <form action="">
+            <input class="form-control-file" type="file" id="photoInput3" name="filename" onchange="readURL(this, 'photo3')">
+          </form>
+          One of three columns
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-sm image-container">
+          <img id="photo4" class="image-data">
+          <form action="">
+            <input class="form-control-file"  type="file" id="photoInput4" name="filename" onchange="readURL(this, 'photo4')">
+          </form>
+          One of three columns
+        </div>
+        <div class="col-sm image-container">
+          <img id="photo5" class="image-data">
+          <form action="">
+            <input class="form-control-file"  type="file" id="photoInput5" name="filename" onchange="readURL(this, 'photo5')">
+          </form>
+          One of three columns
+        </div>
+        <div class="col-sm image-container">
+          <img id="photo6" class="image-data">
+          <form action="">
+            <input class="form-control-file"  type="file" id="photoInput6" name="filename" onchange="readURL(this, 'photo6')">
+          </form>
+          One of three columns
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+           <!-- <button class="btn btn-primary btn-block">Click to Display Photo</button>
+           <button onclick="displayPhoto"> -->
+           <button onclick = "addPhotoToDatabase()">
+                Submit/login
+              </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+  <script src="../roomble.js"></script>
+
+  <script defer src="../firebaseConfig.js"></script>
+  </body>
+</html>
