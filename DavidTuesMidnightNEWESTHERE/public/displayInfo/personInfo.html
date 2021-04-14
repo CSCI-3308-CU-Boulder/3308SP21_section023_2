@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ <link href="roomble.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+    <script>
+      //Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      // var firebaseConfig = {
+      //   apiKey: "AIzaSyAntjt2kCb6-HpIcfmswpu7lNly-6vaItA",
+      //   authDomain: "roomble-73694.firebaseapp.com",
+      //   databaseURL: "https://roomble-73694-default-rtdb.firebaseio.com",
+      //   projectId: "roomble-73694",
+      //   storageBucket: "roomble-73694.appspot.com",
+      //   messagingSenderId: "44177614441",
+      //   appId: "1:44177614441:web:e6c2b18f7ba4a6b9d624f8",
+      //   measurementId: "G-X8DB013271"
+      // };
+      // Initialize Firebase
+      // firebase.initializeApp(firebaseConfig);
+      // var firebaseRef = firebase.database().ref();
+      // firebaseRef.once("value", function(snapshot){
+      //   // var data=snapshot.val();
+      //   // for (let i in data) {
+      //   //   console.log(data[i]);
+      //   // }
+      //   snapshot.forEach(function(element){
+      //     document.querySelector('#root').innerHTML=`<div>${element}</div>`
+      //   });
+      //firebase.analytics();
+    </script>
+<style>
+    .logo_header {
+      width: 80%;
+      max-width: 200px;
+    }
+
+    .image-container {
+      min-width: 200px;
+      min-height: 200px;
+      margin: 1rem;
+      padding: 1rem;
+      border: 1px solid #cccccc;
+      border-radius: 10px;
+    }
+</style>
+
+  <link href="../settingsPage/settings.css" rel="stylesheet">
+  </head>
+
+  <body onload="javascript:emailLoginData()">
+
+    <nav id="navbar" class="navbar navbar-expand-sm bg-dark">
+        <style>
+            .navbar-nav > .active > a {color: rgb(255, 255, 255);}
+        </style>
+        <style>
+            #block_container{
+                text-align:center;
+            }
+            #bloc1, #bloc2{
+                display:inline;
+            }
+        </style>
+        <ul class="navbar-nav">
+            <li class="navbar-brand ml-auto" >
+              <a href= "../homeScreen/homepage.html">
+                <img src="roomblelogo.png" alt="Roomble Logo" width = "50px" height="50px">
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../settingsPage/profilesettings.html">Profile</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../settingsPage/preferencesettings.html">Preferences</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../displayInfo/personInfo.html">My Info</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="../photoPage/photospage.html">Photos</a>
+        </ul>
+    </nav>
+
+
+   <div class="container">
+       <form id="photo_form">
+      <div class="card text-center">
+      <div class="card-header">
+
+      <div class="row">
+        <div class="col text-center">
+          <h1>My Profile</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+
+           <button onclick = "displayPhoto()">
+                Display my Info
+              </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+  <script src="../roomble.js"></script>
+
+  <script defer src="../firebaseConfig.js"></script>
+  </body>
+</html>
