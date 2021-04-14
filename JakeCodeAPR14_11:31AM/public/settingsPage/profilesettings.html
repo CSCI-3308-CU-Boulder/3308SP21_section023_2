@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html lang='en'>
+    <head>
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyAntjt2kCb6-HpIcfmswpu7lNly-6vaItA",
+          authDomain: "roomble-73694.firebaseapp.com",
+          databaseURL: "https://roomble-73694-default-rtdb.firebaseio.com",
+          projectId: "roomble-73694",
+          storageBucket: "roomble-73694.appspot.com",
+          messagingSenderId: "44177614441",
+          appId: "1:44177614441:web:e6c2b18f7ba4a6b9d624f8",
+          measurementId: "G-X8DB013271"
+        };
+        // Initialize Firebase
+      //  firebase.initializeApp(firebaseConfig);
+        //firebase.analytics();
+      </script>
+        <title>Profile Settings</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="settings.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="../roomble.js"></script>
+    </head>
+
+    <body onload="javascript:emailLoginData()">
+        <nav id="navbar" class="navbar navbar-expand-sm bg-dark">
+            <style>
+                .navbar-nav > .active > a {color: rgb(255, 255, 255);}
+            </style>
+            <style>
+                #block_container{
+                    text-align:center;
+                }
+                #bloc1, #bloc2{
+                    display:inline;
+                }
+            </style>
+            <ul class="navbar-nav">
+                <li class="navbar-brand ml-auto" >
+                  <a href= "../homeScreen/homepage.html">
+                    <img src="roomblelogo.png" alt="Roomble Logo" width = "50px" height="50px">
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="profilesettings.html">Profile</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="preferencesettings.html">Preferences</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../displayInfo/personInfo.html">My Info</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../photoPage/photospage.html">Photos</a>
+            </ul>
+        </nav>
+        <div class="container">
+          <div class="card text-center">
+          <div class="card-header">
+            <div id="profilesettings">
+                <h1>Profile Settings</h1>
+                <br/>
+                <form id="profile_form"> <!-- Fran added id="profile_form" remove if issues happen -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="fullName">Full Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="fullName" id="fullName"  placeholder="Enter Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="phoneNumber">Phone Number</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="phoneNumber" id="phoneNumber"  placeholder="Enter Phone Number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <h4>URL to Photo:</h4>
+                      <input type="text" class="form-control" id="item_url" name="item_url" placeholder="">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label"  for="birthday">Date of Birth</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" name="birthday" id="birthday">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="gender">Gender</label>
+                            <select name="gender" id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="bio">Bio</label>
+                            <textarea id="bio" name="bio" rows="4" cols="60"></textarea>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-muted">
+                    <!-- <button class="btn btn-primary btn-block">Submit</button> -->
+                    <button onclick = "addProfileToDatabase()">
+                      Submit
+                    </button>
+                   </div>
+                </form>
+            </div>
+
+          </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
+        <script src="../roomble.js"></script>
+    </body>
+</html>
