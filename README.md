@@ -20,3 +20,4 @@ Brenden Garcia <br/>
 
 ##  How to run our project code
 Our current copy is in JakeCodeAPR14_11:31AM download the public folder into a folder with firebase tools. 
+To test our project to go https://roomble-73694.web.app/, login, go to profile add your information and then click on the roomble icon in the top left hand corner to see the information you just added. 
